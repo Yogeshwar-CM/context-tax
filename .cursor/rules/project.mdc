@@ -1,0 +1,13 @@
+---
+description: Core project rules for AI agents (repo-harness)
+globs:
+alwaysApply: true
+---
+
+# context-tax — agent rules
+
+- Treat `AGENTS.md` as the source of truth.
+- Stack: python
+- Minimal diffs. No unrelated refactors or lockfile churn.
+- No secrets in code or commits.
+- Run project test/lint commands for touched areas (see `AGENTS.md`).
