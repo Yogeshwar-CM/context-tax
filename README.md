@@ -47,7 +47,7 @@ context-tax suggest-ignore --write        # append/create .agentignore
 ### Sample output
 
 ```
-context-tax v0.1.0
+context-tax v0.2.0
 root:    /work/my-app
 scanned: 842 files  |  18.4 MB  |  ~1,102,440 tokens (est.)
 cost*:   ~$3.3073 if an agent ingested everything (at $3.0/M input tokens)
