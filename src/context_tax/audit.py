@@ -32,6 +32,7 @@ DEFAULT_SKIP_DIRS = {
     ".idea",
     ".vscode",
     ".cursor",
+    ".eggs",
 }
 
 LOCKFILES = {
@@ -254,7 +255,12 @@ def audit(
         pruned = []
         keep = []
         for d in dirnames:
-            if d in skip_dirs or d.startswith(".git"):
+            if (
+                d in skip_dirs
+                or d.startswith(".git")
+                or d.endswith(".egg-info")
+                or d.endswith(".dist-info")
+            ):
                 pruned.append(d)
                 if include_skipped_inventory:
                     # rough count of entries inside would be expensive; count dir hit
